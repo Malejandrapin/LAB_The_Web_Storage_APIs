@@ -5,3 +5,32 @@ body {
     flex-direction: column;
     padding: 5rem 10rem;
 }
+
+#favoritos div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+#favoritos img {
+    width: 96px;
+    display: block;
+    margin: 0 auto;
+}
+
+#favoritos p {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}

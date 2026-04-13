@@ -35,8 +35,8 @@ searchPokemonButton.addEventListener('click', async () => {
 
 displayPokemon = (pokemonData) => {
     searchResult.innerHTML = `
-        <h2>${pokemonData.name}</h2>
-        <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
+        <h2 class="pokemon-name">${pokemonData.name}</h2>
+        <img class="pokemon-img" src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
     `;
 }
 
@@ -68,8 +68,8 @@ updateFavoritesList = () => {
         const pokemonElement = document.createElement('div');
         pokemonElement.classList.add('favorite-pokemon');
         pokemonElement.innerHTML = `
-            <h3>${pokemon.name}</h3>
-            <img src="${pokemon.image}" alt="${pokemon.name}">
+            <h3 class="fav-pokemon-name">${pokemon.name}</h3>
+            <img class="fav-pokemon-img" src="${pokemon.image}" alt="${pokemon.name}">
         `;
         favoritesContainer.appendChild(pokemonElement);
     });

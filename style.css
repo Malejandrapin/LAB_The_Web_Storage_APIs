@@ -4,6 +4,18 @@ body {
     display: flex;
     flex-direction: column;
     padding: 5rem 10rem;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 h1 {
@@ -12,6 +24,7 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
     font-weight: 600;
+    padding-top: 3rem;
 }
 
 label {
@@ -78,7 +91,13 @@ select:focus {
     background-color: white;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     width: 150px;
+    transition: transform 0.3s ease;
 }
+
+#favoritos div:hover{
+ transform: scale(1.1);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.348);
+} 
 
 #favoritos img {
     width: 96px;
@@ -97,4 +116,28 @@ select:focus {
     flex-wrap: wrap;
     gap: 16px;
     padding: 16px;
+}
+
+#search-result {
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pokemon-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.pokemon-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }

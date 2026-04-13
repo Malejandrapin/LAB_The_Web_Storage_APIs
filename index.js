@@ -34,6 +34,7 @@ searchPokemonButton.addEventListener('click', async () => {
 });
 
 displayPokemon = (pokemonData) => {
+    searchResult.style.display = 'block';
     searchResult.innerHTML = `
         <h2 class="pokemon-name">${pokemonData.name}</h2>
         <img class="pokemon-img" src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
@@ -80,6 +81,7 @@ clearFavoritesButton.addEventListener('click', () => {
     updateFavoritesList();
 })
 
+searchResult.style.display = 'none';
 saveFavoriteButton.disabled = true;
 updateFavoritesList();
 

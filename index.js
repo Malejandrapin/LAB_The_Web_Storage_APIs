@@ -27,6 +27,7 @@ searchPokemonButton.addEventListener('click', async () => {
         newPokemon.nombre = pokemonData.name;
         newPokemon.image = pokemonData.sprites.front_default;
         displayPokemon(pokemonData);
+        saveFavoriteButton.disabled = false;
     } catch (error) {
         searchResult.textContent = error.message;
     }
@@ -57,6 +58,7 @@ saveFavoriteButton.addEventListener('click', () => {
     currentFavorites.push({ name: newPokemon.nombre, image: newPokemon.image });
     localStorage.setItem('favorites', JSON.stringify(currentFavorites));
     updateFavoritesList();
+    saveFavoriteButton.disabled = true;
 });
 
 updateFavoritesList = () => {
@@ -78,5 +80,6 @@ clearFavoritesButton.addEventListener('click', () => {
     updateFavoritesList();
 })
 
+saveFavoriteButton.disabled = true;
 updateFavoritesList();
 

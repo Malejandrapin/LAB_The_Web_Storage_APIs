@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>LAB: The web storage APIs</title>
 </head>
+
 <body>
 
-    <input type="text" id="input-pokemon-search">
-    <button id="search-pokemon-button">Search</button>
+    <label for="input-pokemon-search">Nombre del Pokemón:</label>
+    <input type="text" id="input-pokemon-search" placeholder="Escribe acá el nombre de tu Pokemón">
+    <button id="search-pokemon-button">Buscar</button>
     <div id="search-result"></div>
-    <button id="save-favorite-button">guardar como favorito</button>
-    <div id="favorites-container"></div>
+    <button id="save-favorite-button">❤️ Guardar</button>
+    <button id="clear-favorites-button">Borrar todos</button>
+    <div id="favoritos"></div>
 
+    <script src="index.js"></script>
 </body>
+
 </html>
